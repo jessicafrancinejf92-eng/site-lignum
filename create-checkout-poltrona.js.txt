@@ -1,0 +1,127 @@
+exports.handler = async (event) => {
+  try {
+    if (event.httpMethod !== "POST") {
+      return {
+        statusCode: 405,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          error: "Método não permitido. Use POST."
+        })
+      };
+    }
+
+    const accessToken = process.env.MP_ACCESS_TOKEN;
+    const siteUrl = process.env.SITE_URL || "https://lignummoveis.com.br";
+
+    if (!accessToken) {
+      return {
+        statusCode: 500,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          error: "MP_ACCESS_TOKEN não configurado na Netlify."
+        })
+      };
+    }
+
+    let bodyData = {};
+    try {
+      bodyData = JSON.parse(event.body || "{}");
+    } catch (e) {
+      return {
+        statusCode: 400,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          error: "JSON inválido enviado pelo site."
+        })
+      };
+    }
+
+    const cep = bodyData.cep || "";
+
+    const payload = {
+      items: [
+        {
+          title: "Poltrona Orgânica Decorativa Ripada",
+          quantity: 1,
+          currency_id: "BRL",
+          unit_price: 24490
+        }
+      ],
+      back_urls: {
+        success: `${siteUrl}/pagamento-sucesso.html`,
+        failure: `${siteUrl}/pagamento-falhou.html`,
+        pending: `${siteUrl}/pagamento-pendente.html`
+      },
+      auto_return: "approved",
+      metadata: {
+        cep_cliente: cep,
+        produto: "poltrona-organica-ripada"
+      }
+    };
+
+    const mpResponse = await fetch("https://api.mercadopago.com/checkout/preferences", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${accessToken}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const responseText = await mpResponse.text();
+
+    let mpData;
+    try {
+      mpData = JSON.parse(responseText);
+    } catch (e) {
+      return {
+        statusCode: 500,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          error: "Resposta inválida do Mercado Pago.",
+          raw_response: responseText
+        })
+      };
+    }
+
+    if (!mpResponse.ok) {
+      return {
+        statusCode: mpResponse.status,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          error: mpData.message || "Erro ao criar preferência no Mercado Pago.",
+          details: mpData
+        })
+      };
+    }
+
+    if (!mpData.init_point) {
+      return {
+        statusCode: 500,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          error: "O Mercado Pago não retornou init_point.",
+          details: mpData
+        })
+      };
+    }
+
+    return {
+      statusCode: 200,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        init_point: mpData.init_point
+      })
+    };
+
+  } catch (error) {
+    return {
+      statusCode: 500,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        error: "Erro interno na função.",
+        message: error.message
+      })
+    };
+  }
+};

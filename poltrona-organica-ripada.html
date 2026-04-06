@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>LIGNUM MÓVEIS — Poltrona Orgânica Ripada Decorativa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Poltrona orgânica ripada decorativa. Modelo premium paramétrico, enviada montada."
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      background: #ffffff;
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #fafafa;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 14px;
+      gap: 20px;
+    }
+
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .nav-links a {
+      color: #444;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: #000;
+    }
+
+    .btn {
+      padding: 12px 18px;
+      border-radius: 8px;
+      background: #d6b790;
+      border: none;
+      color: #fff;
+      font-size: 13px;
+      cursor: pointer;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: background 0.2s ease, transform 0.2s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn:hover {
+      background: #c7a57c;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #b28d63;
+      border: 1px solid #d6b790;
+    }
+
+    .btn-outline:hover {
+      background: #f7f1ea;
+      color: #a97f4f;
+    }
+
+    .btn-block {
+      width: 100%;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1, h2, h3 {
+      color: #222;
+      margin-bottom: 14px;
+    }
+
+    .product-section {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 40px;
+      margin-bottom: 30px;
+      align-items: flex-start;
+    }
+
+    .gallery {
+      display: grid;
+      gap: 14px;
+    }
+
+    .gallery-main img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid #ddd;
+      display: block;
+      cursor: zoom-in;
+      transition: transform 0.2s ease;
+    }
+
+    .gallery-main img:hover {
+      transform: scale(1.01);
+    }
+
+    .thumb-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .thumb-row img {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .thumb-row img:hover {
+      border-color: #d6b790;
+      transform: scale(1.02);
+    }
+
+    .tagline {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #777;
+      margin-bottom: 6px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .info-list {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    .info-list li {
+      margin-bottom: 6px;
+    }
+
+    .card {
+      border: 1px solid #ececec;
+      padding: 18px;
+      border-radius: 12px;
+      margin-bottom: 18px;
+      background: #fafafa;
+    }
+
+    .price-main {
+      font-size: 30px;
+      font-weight: 700;
+      color: #111;
+      margin: 0 0 6px;
+    }
+
+    .price-sub {
+      margin: 0 0 8px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .installments {
+      margin: 0;
+      color: #444;
+      font-size: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #222;
+    }
+
+    .input-text {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      margin-bottom: 10px;
+      background: #fff;
+    }
+
+    .small-note {
+      font-size: 13px;
+      color: #666;
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+
+    .action-stack {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .status-box {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+      min-height: 22px;
+    }
+
+    .video-section {
+      margin-top: 24px;
+    }
+
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #000;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .lightbox-img {
+      max-width: 95%;
+      max-height: 90vh;
+      border-radius: 12px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 28px;
+      font-size: 42px;
+      color: #fff;
+      cursor: pointer;
+      line-height: 1;
+      z-index: 10001;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 42px;
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 12px 18px;
+      border-radius: 8px;
+      z-index: 10001;
+    }
+
+    .lightbox-nav.left {
+      left: 20px;
+    }
+
+    .lightbox-nav.right {
+      right: 20px;
+    }
+
+    .lightbox-nav:hover {
+      background: rgba(0,0,0,0.7);
+    }
+
+    footer {
+      background: #fafafa;
+      border-top: 1px solid #eee;
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+    }
+
+    @media (max-width: 900px) {
+      .product-section {
+        grid-template-columns: 1fr;
+      }
+
+      .thumb-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .thumb-row img {
+        height: 100px;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .lightbox-nav {
+        font-size: 34px;
+        padding: 10px 14px;
+      }
+
+      .lightbox-nav.left {
+        left: 10px;
+      }
+
+      .lightbox-nav.right {
+        right: 10px;
+      }
+    }
+  </style>
+
+  <script>
+    let imagens = [];
+    let indiceAtual = 0;
+
+    function carregarImagens() {
+      const thumbs = document.querySelectorAll(".thumb-row img");
+      imagens = [];
+      thumbs.forEach((img) => {
+        imagens.push(img.src);
+      });
+    }
+
+    function trocarImagem(src) {
+      document.getElementById("foto-principal").src = src;
+    }
+
+    function abrirImagem(src) {
+      if (imagens.length === 0) {
+        carregarImagens();
+      }
+
+      indiceAtual = imagens.indexOf(src);
+      if (indiceAtual === -1) {
+        indiceAtual = 0;
+      }
+
+      document.getElementById("lightbox").style.display = "flex";
+      document.getElementById("lightbox-img").src = imagens[indiceAtual];
+    }
+
+    function proximaImagem(event) {
+      event.stopPropagation();
+      indiceAtual++;
+      if (indiceAtual >= imagens.length) {
+        indiceAtual = 0;
+      }
+      document.getElementById("lightbox-img").src = imagens[indiceAtual];
+    }
+
+    function imagemAnterior(event) {
+      event.stopPropagation();
+      indiceAtual--;
+      if (indiceAtual < 0) {
+        indiceAtual = imagens.length - 1;
+      }
+      document.getElementById("lightbox-img").src = imagens[indiceAtual];
+    }
+
+    function fecharImagem(event) {
+      if (event.target.id === "lightbox") {
+        document.getElementById("lightbox").style.display = "none";
+      }
+    }
+
+    function fecharImagemBotao() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+    function irParaWhatsappMedidaPersonalizada() {
+      const medida = document.getElementById("outra-medida").value.trim();
+      const cep = document.getElementById("cep").value.trim();
+
+      let mensagem = "Olá! Quero orçamento da Poltrona Orgânica Decorativa Ripada.";
+      if (medida) {
+        mensagem += " Gostaria nesta medida: " + medida + ".";
+      } else {
+        mensagem += " Quero uma medida personalizada.";
+      }
+      if (cep) {
+        mensagem += " Meu CEP é: " + cep + ".";
+      }
+      mensagem += " Pode me informar prazo e frete?";
+
+      const url = "https://wa.me/5551990105508?text=" + encodeURIComponent(mensagem);
+      window.open(url, "_blank");
+    }
+
+    async function comprarAgora() {
+      const comprarBtn = document.getElementById("btn-comprar");
+      const status = document.getElementById("checkout-status");
+      const cep = document.getElementById("cep").value.trim();
+
+      comprarBtn.disabled = true;
+      comprarBtn.textContent = "Carregando checkout...";
+      status.textContent = "Criando pagamento...";
+
+      try {
+        const response = await fetch("/.netlify/functions/create-checkout-poltrona", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            cep: cep,
+            productSlug: "poltrona-organica-ripada"
+          })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.error || "Não foi possível iniciar o checkout.");
+        }
+
+        if (!data.init_point) {
+          throw new Error("Checkout não retornou link de pagamento.");
+        }
+
+        window.location.href = data.init_point;
+      } catch (error) {
+        console.error(error);
+        status.textContent = error.message || "Erro ao iniciar pagamento.";
+        comprarBtn.disabled = false;
+        comprarBtn.textContent = "Comprar agora";
+      }
+    }
+
+    document.addEventListener("keydown", function (event) {
+      const lightboxAberto = document.getElementById("lightbox").style.display === "flex";
+
+      if (event.key === "Escape") {
+        fecharImagemBotao();
+      }
+
+      if (lightboxAberto && event.key === "ArrowRight") {
+        proximaImagem(event);
+      }
+
+      if (lightboxAberto && event.key === "ArrowLeft") {
+        imagemAnterior(event);
+      }
+    });
+
+    window.addEventListener("DOMContentLoaded", carregarImagens);
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="nav-logo" onclick="location.href='index.html'">LIGNUM MÓVEIS</div>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="mesa-floral.html">Mesa Floral</a>
+        <a href="aparador-floral.html">Aparador Floral</a>
+        <a href="mesa-ripada-redonda.html">Mesa Ripada Redonda</a>
+        <a href="mesa-escrivaninha-ripada-organica.html">Escrivaninha Ripada</a>
+        <a href="banqueta-organica-ripada.html">Banqueta Ripado</a>
+        <a href="poltrona-organica-ripada.html">Poltrona Orgânica</a>
+      </div>
+
+      <a href="https://wa.me/5551990105508" target="_blank" rel="noopener" class="btn">
+        Orçamento
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section id="produto" class="product-section">
+      <div class="gallery">
+        <div class="gallery-main">
+          <img
+            id="foto-principal"
+            src="https://http2.mlstatic.com/D_NQ_NP_2X_956609-MLB103657642319_012026-F.webp"
+            alt="Poltrona orgânica ripada decorativa Lignum"
+            onclick="abrirImagem(this.src)"
+          />
+        </div>
+
+        <div class="thumb-row">
+          <img onclick="trocarImagem(this.src)" src="https://http2.mlstatic.com/D_NQ_NP_2X_956609-MLB103657642319_012026-F.webp" alt="Poltrona orgânica - foto destaque" />
+          <img onclick="trocarImagem(this.src)" src="https://http2.mlstatic.com/D_NQ_NP_2X_641093-MLB103141930068_012026-F.webp" alt="Poltrona orgânica - foto 2" />
+          <img onclick="trocarImagem(this.src)" src="https://http2.mlstatic.com/D_NQ_NP_2X_786010-MLB103141955740_012026-F.webp" alt="Poltrona orgânica - foto 3" />
+          <img onclick="trocarImagem(this.src)" src="https://http2.mlstatic.com/D_NQ_NP_2X_676075-MLB103655773591_012026-F.webp" alt="Poltrona orgânica - foto 4" />
+          <img onclick="trocarImagem(this.src)" src="https://http2.mlstatic.com/D_NQ_NP_2X_665077-MLB103656366807_012026-F.webp" alt="Poltrona orgânica - foto 5" />
+          <img onclick="trocarImagem(this.src)" src="https://http2.mlstatic.com/D_NQ_NP_2X_806826-MLB103655773581_012026-F.webp" alt="Poltrona orgânica - foto 6" />
+          <img onclick="trocarImagem(this.src)" src="https://http2.mlstatic.com/D_NQ_NP_2X_679123-MLB103657928217_012026-F.webp" alt="Poltrona orgânica - foto 7" />
+        </div>
+      </div>
+
+      <div>
+        <p class="tagline">Decoração · Sala · Recepção · Premium</p>
+
+        <h1>Poltrona Orgânica Decorativa Ripada</h1>
+
+        <p>
+          Uma poltrona escultural com design orgânico e estrutura ripada, ideal para salas,
+          recepções, lounges e ambientes que precisam de um ponto focal premium.
+          Feita em MDF ou compensado naval, unindo presença estética e robustez.
+        </p>
+
+        <h3>Medidas e especificações</h3>
+        <ul class="info-list">
+          <li><strong>Largura x Profundidade x Altura:</strong> 71 cm x 91 cm x 85 cm</li>
+          <li><strong>Peso máximo suportado:</strong> 150 kg</li>
+          <li><strong>Requer montagem:</strong> não (vai pronta)</li>
+          <li><strong>Inclui manual:</strong> sim</li>
+          <li><strong>É reclinável:</strong> não</li>
+          <li><strong>Tecido removível:</strong> não</li>
+        </ul>
+
+        <div class="card">
+          <h3>Valor</h3>
+          <p class="price-main">R$ 24.490,00</p>
+          <p class="price-sub">Valor referente ao modelo nas medidas padrão.</p>
+          <p class="installments">Pagamento por Pix, boleto ou cartão de crédito.</p>
+        </div>
+
+        <div class="card">
+          <h3>Comprar medida padrão</h3>
+
+          <label for="cep">Digite seu CEP</label>
+          <input
+            id="cep"
+            class="input-text"
+            type="text"
+            placeholder="00000-000"
+          />
+
+          <p class="small-note">
+            O CEP vai junto para identificação do pedido. O frete automático entra na próxima etapa, com sua integração de frete.
+          </p>
+
+          <div class="action-stack">
+            <button id="btn-comprar" class="btn btn-block" type="button" onclick="comprarAgora()">
+              Comprar agora
+            </button>
+          </div>
+
+          <div id="checkout-status" class="status-box"></div>
+        </div>
+
+        <div class="card">
+          <h3>Outras medidas sob consulta</h3>
+
+          <label for="outra-medida">Informe a medida desejada</label>
+          <input
+            id="outra-medida"
+            class="input-text"
+            type="text"
+            placeholder="Ex: 80 x 95 x 90 cm"
+          />
+
+          <p class="small-note">
+            Para medida personalizada, o ideal é orçamento primeiro para calcular corretamente valor e envio.
+          </p>
+
+          <div class="action-stack">
+            <button class="btn btn-outline btn-block" type="button" onclick="irParaWhatsappMedidaPersonalizada()">
+              Solicitar orçamento sob medida
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Formas de pagamento</h3>
+          <ul class="info-list">
+            <li><strong>Pix à vista</strong></li>
+            <li><strong>Boleto bancário</strong></li>
+            <li><strong>Cartão de crédito</strong></li>
+          </ul>
+        </div>
+
+        <div class="video-section">
+          <h3>Veja o produto em vídeo</h3>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/OYyIJa2Uamg"
+              title="Vídeo da Poltrona Orgânica Decorativa Ripada"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 24px;">Materiais & acabamento</h3>
+        <ul class="info-list">
+          <li><strong>Estrutura:</strong> MDF ou Compensado Naval</li>
+          <li><strong>Material:</strong> MDF ou Compensado Naval</li>
+          <li><strong>Pés:</strong> MDF ou Compensado Naval</li>
+          <li><strong>Cor/acabamento:</strong> Carvalho ou conforme projeto</li>
+          <li><strong>Linha:</strong> Premium</li>
+          <li><strong>Modelo:</strong> Premium Paramétrica</li>
+          <li><strong>Estilo:</strong> Moderno</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Construção & Durabilidade</h2>
+      <p>
+        Estruturada em MDF ou compensado naval, a poltrona foi desenvolvida para suportar uso diário com estabilidade,
+        além de manter a estética premium do ripado em uma peça de impacto.
+      </p>
+      <ul class="info-list">
+        <li>MDF / Compensado naval: resistência e estabilidade</li>
+        <li>Ripado com leitura paramétrica e acabamento premium</li>
+        <li>Envio pronto para uso, sem necessidade de montagem</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Ambientes & Aplicações</h2>
+      <ul class="info-list">
+        <li>Sala de estar e living</li>
+        <li>Recepção e consultórios</li>
+        <li>Lounge e espaços comerciais premium</li>
+        <li>Decoração contemporânea com estética orgânica</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Logística</h2>
+      <p>
+        A peça segue pronta para uso e é embalada com proteção reforçada. O envio é informado conforme a cidade de entrega.
+      </p>
+      <ul class="info-list">
+        <li>Peça enviada montada</li>
+        <li>Embalagem segura e reforçada</li>
+        <li>Envio para todo o Brasil</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" onclick="fecharImagem(event)">
+    <span class="lightbox-close" onclick="fecharImagemBotao()">&times;</span>
+    <button class="lightbox-nav left" onclick="imagemAnterior(event)">‹</button>
+    <img id="lightbox-img" class="lightbox-img" src="" alt="Imagem ampliada do produto" />
+    <button class="lightbox-nav right" onclick="proximaImagem(event)">›</button>
+  </div>
+
+  <footer>
+    © LIGNUM MÓVEIS — Orgânicos e Flutuantes, peças ripadas e paramétricas feitas sob encomenda.
+  </footer>
+</body>
+</html>

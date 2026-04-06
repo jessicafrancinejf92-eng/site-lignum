@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>LIGNUM MÓVEIS— Aparador Floral</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      background: #ffffff;
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #fafafa;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 14px;
+    }
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .nav-links a {
+      margin-left: 20px;
+      color: #444;
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: #000; }
+    .btn {
+      padding: 10px 18px;
+      border-radius: 6px;
+      background: #d6b790;
+      border: none;
+      color: #fff;
+      font-size: 13px;
+      cursor: pointer;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .btn:hover { background: #c7a57c; }
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h1,h2,h3 { color: #222; margin-bottom: 14px; }
+    .product-section {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+      align-items: flex-start;
+    }
+    .gallery { display: grid; gap: 14px; }
+    .gallery-main img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+    }
+    .thumb-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .thumb-row img {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    .thumb-row img:hover {
+      border-color: #d6b790;
+      transform: scale(1.02);
+    }
+    .tagline {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #777;
+      margin-bottom: 6px;
+    }
+    .section { margin-bottom: 60px; }
+    ul li { margin-bottom: 6px; }
+    footer {
+      background: #fafafa;
+      border-top: 1px solid #eee;
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+    }
+    @media (max-width: 900px) {
+      .product-section { grid-template-columns: 1fr; }
+      .thumb-row img { height: 90px; }
+      .nav-links { display: none; }
+    }
+  </style>
+  <script>
+    function trocarImagem(src) {
+      document.getElementById("foto-principal").src = src;
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="nav-logo" onclick="location.href='index.html'">LIGNUM MÓVEIS</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="mesa-floral.html">Mesa Floral</a>
+        <a href="aparador-floral.html">Aparador Floral</a>
+      </div>
+      <a href="https://wa.me/5551990105508" target="_blank">
+        <button class="btn">Orçamento</button>
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="produto" class="product-section">
+      <div class="gallery">
+        <div class="gallery-main">
+          <img
+            id="foto-principal"
+            src="https://http2.mlstatic.com/D_NQ_NP_2X_782660-MLB49241748299_032022-F-centro-de-sala-flores-110cm-x-80cm-frete-gratis.webp"
+            alt="Aparador Floral Lignum">
+        </div>
+
+        <div class="thumb-row">
+          <img onclick="trocarImagem(this.src)"
+            src="https://http2.mlstatic.com/D_NQ_NP_2X_849304-MLB51138936370_082022-F-mesa-centro-de-sala-extra-grande.webp">
+          <img onclick="trocarImagem(this.src)"
+            src="https://http2.mlstatic.com/D_NQ_NP_2X_993586-MLB93405592571_092025-F-mesa-centro-de-sala-extra-grande.webp">
+          <img onclick="trocarImagem(this.src)"
+            src="https://http2.mlstatic.com/D_NQ_NP_2X_866392-MLB80141846081_102024-F-mesa-de-sala-floral-65-x-45-frete-gratis.webp">
+          <img onclick="trocarImagem(this.src)"
+            src="https://http2.mlstatic.com/D_NQ_NP_2X_954163-MLB49241789130_032022-F-centro-de-sala-flores-110cm-x-80cm-frete-gratis.webp">
+          <img onclick="trocarImagem(this.src)"
+            src="https://http2.mlstatic.com/D_NQ_NP_2X_782660-MLB49241748299_032022-F-centro-de-sala-flores-110cm-x-80cm-frete-gratis.webp">
+          <img onclick="trocarImagem(this.src)"
+            src="https://http2.mlstatic.com/D_NQ_NP_2X_888872-MLB44938533941_022021-F-centro-de-sala-flores-110cm-x-80cm-frete-gratis.webp">
+          <img onclick="trocarImagem(this.src)"
+            src="https://http2.mlstatic.com/D_NQ_NP_2X_994433-MLB49241779181_032022-F-centro-de-sala-flores-110cm-x-80cm-frete-gratis.webp">
+        </div>
+      </div>
+
+      <div>
+        <p class="tagline">Coleção Floral · Aparador sob medida</p>
+        <h1>Aparador Floral</h1>
+        <p>
+          Um aparador autoral, projetado para oferecer elegância e exclusividade.
+          Feito sob medida, de forma artesanal, pensado para adaptar-se ao seu espaço
+          e estilo de vida, sem perder a identidade única da Lignum.
+        </p>
+
+        <h3>Personalização e medidas</h3>
+        <p>
+          O Aparador Floral é desenvolvido de acordo com a necessidade do ambiente:
+          largura, profundidade e altura são ajustadas conforme o projeto.
+        </p>
+        <p>
+          As cores da base e dos elementos florais podem seguir a paleta do restante do mobiliário,
+          criando uma composição integrada com o espaço.
+        </p>
+
+        <a href="https://wa.me/5551990105508" target="_blank">
+          <button class="btn">Comprar</button>
+        </a>
+      </div>
+    </section>
+
+    <section id="materiais" class="section">
+      <h2>Materiais & Construção</h2>
+      <p>
+        Todos os aparadores são fabricados em MDF de alta qualidade,
+        com acabamento artesanal, atenção a cada detalhe e montagem cuidadosa.
+      </p>
+      <ul>
+        <li>• MDF premium de alta resistência</li>
+        <li>• Lixamento e acabamento individual, peça a peça</li>
+        <li>• Acabamento refinado nas superfícies e detalhes florais</li>
+        <li>• Pintura nas partes decorativas com tinta acrílica semibrilho</li>
+        <li>• Enviado completamente montado e pronto para uso</li>
+      </ul>
+    </section>
+
+    <section id="producao" class="section">
+      <h2>Produção & Logística</h2>
+      <p>
+        Cada peça da Lignum é feita sob encomenda, com foco absoluto em personalização
+        e acabamento refinado. O tempo médio de produção varia entre 3 e 8 semanas,
+        dependendo da configuração solicitada e da agenda do ateliê.
+      </p>
+      <p>
+        Sempre que possível, realizamos entrega presencial para garantir que o aparador chegue
+        em perfeitas condições. Para outras localidades, organizamos um envio seguro,
+        embalando e protegendo a peça para transporte.
+      </p>
+      <ul>
+        <li>• Produção individual e artesanal</li>
+        <li>• Prazo médio: 3 a 8 semanas</li>
+        <li>• Entrega presencial, quando viável</li>
+        <li>• Envio seguro adaptado à região do cliente</li>
+      </ul>
+    </section>
+
+    <section id="historia" class="section">
+      <h2>Nosso Propósito</h2>
+      <p>
+        Na Lignum, cada móvel é pensado para ser único. Não acreditamos em produção em série;
+        acreditamos em peças com alma, feitas sob medida para cada pessoa, cada lar, cada história.
+      </p>
+      <p>
+        A partir da nossa filosofia de design autoral e atenção individual, construímos objetos
+        que refletem o estilo, a personalidade e o ambiente de quem os encomenda.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © LIGNUM MÓVEIS— Mobiliário autoral, peças únicas feitas sob encomenda.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>LIGNUM MÓVEIS — Mesa de Centro Elipse Orgânica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      background: #ffffff;
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #fafafa;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 14px;
+    }
+
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      color: #444;
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: #000; }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 6px;
+      background: #d6b790;
+      border: none;
+      color: #fff;
+      font-size: 13px;
+      cursor: pointer;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .btn:hover { background: #c7a57c; }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1,h2,h3 {
+      color: #222;
+      margin-bottom: 14px;
+    }
+
+    .product-section {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+      align-items: flex-start;
+    }
+
+    .gallery { display: grid; gap: 14px; }
+
+    .gallery-main img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+    }
+
+    .thumb-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .thumb-row img {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    .thumb-row img:hover {
+      border-color: #d6b790;
+      transform: scale(1.02);
+    }
+
+    .tagline {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #777;
+      margin-bottom: 6px;
+    }
+
+    .section { margin-bottom: 60px; }
+
+    ul li { margin-bottom: 6px; }
+
+    .specs {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 16px 18px;
+      background: #fff;
+    }
+
+    footer {
+      background: #fafafa;
+      border-top: 1px solid #eee;
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+    }
+
+    @media (max-width: 900px) {
+      .product-section { grid-template-columns: 1fr; }
+      .thumb-row img { height: 90px; }
+      .nav-links { display: none; }
+    }
+  </style>
+
+  <script>
+    function trocarImagem(src) {
+      document.getElementById("foto-principal").src = src;
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="nav-logo" onclick="location.href='index.html'">LIGNUM MÓVEIS</div>
+
+      <div class="nav-links">
+        <a href="index.html#produtos">Produtos</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#contato">Contato</a>
+      </div>
+
+      <a href="https://wa.me/5551990105508" target="_blank" rel="noopener">
+        <button class="btn">Orçamento</button>
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- GALERIA + TEXTO PRINCIPAL -->
+    <section id="produto" class="product-section">
+
+      <!-- GALERIA -->
+      <div class="gallery">
+        <div class="gallery-main">
+          <img
+            id="foto-principal"
+            src="https://http2.mlstatic.com/D_NQ_NP_2X_877155-MLB106012083071_012026-F.webp"
+            alt="Mesa de Centro Elipse Orgânica Lignum Móveis"
+          />
+        </div>
+
+        <div class="thumb-row">
+          <img onclick="trocarImagem(this.src)"
+               src="https://http2.mlstatic.com/D_NQ_NP_2X_877155-MLB106012083071_012026-F.webp"
+               alt="Mesa de Centro Elipse Orgânica - Foto 1" />
+
+          <img onclick="trocarImagem(this.src)"
+               src="https://http2.mlstatic.com/D_NQ_NP_2X_831905-MLB105417273988_012026-F.webp"
+               alt="Mesa de Centro Elipse Orgânica - Foto 2" />
+
+          <img onclick="trocarImagem(this.src)"
+               src="https://http2.mlstatic.com/D_NQ_NP_2X_968062-MLB105417273986_012026-F.webp"
+               alt="Mesa de Centro Elipse Orgânica - Foto 3" />
+
+          <img onclick="trocarImagem(this.src)"
+               src="https://http2.mlstatic.com/D_NQ_NP_2X_698396-MLB105417333518_012026-F.webp"
+               alt="Mesa de Centro Elipse Orgânica - Foto 4" />
+        </div>
+      </div>
+
+      <!-- TEXTO PRINCIPAL -->
+      <div>
+        <p class="tagline">Design orgânico · tampo em vidro · linha minimalista</p>
+
+        <h1>Mesa de Centro Elipse Orgânica (Design Moderno)</h1>
+
+        <p>
+          Uma mesa de centro em formato elíptico com leitura leve e contemporânea,
+          pensada para ambientes minimalistas e projetos autorais. A base traz estabilidade
+          e presença, enquanto o tampo em vidro valoriza o desenho e deixa o ambiente mais amplo.
+        </p>
+
+        <div class="specs">
+          <h3>Medidas (modelo desta página)</h3>
+          <ul>
+            <li><strong>Comprimento:</strong> 150 cm</li>
+            <li><strong>Largura:</strong> 75 cm</li>
+            <li><strong>Altura:</strong> 34 cm</li>
+            <li><strong>Peso aproximado:</strong> 40 kg</li>
+          </ul>
+
+          <h3>Características principais</h3>
+          <ul>
+            <li><strong>Forma:</strong> Elipse</li>
+            <li><strong>Estilo:</strong> Minimalista / Moderno</li>
+            <li><strong>Base:</strong> MDF</li>
+            <li><strong>Tampo:</strong> Vidro (centro de vidro)</li>
+            <li><strong>Quantidade de pés:</strong> 2</li>
+            <li><strong>Acabamento:</strong> Fita de borda</li>
+            <li><strong>Cor:</strong> a definir (conforme seu projeto)</li>
+          </ul>
+
+          <h3>Montagem</h3>
+          <ul>
+            <li><strong>Requer montagem:</strong> Sim</li>
+            <li><strong>Inclui manual de montagem:</strong> Sim</li>
+            <li><strong>Inclui acessórios de montagem:</strong> Não</li>
+          </ul>
+        </div>
+
+        <p style="margin-top:14px;">
+          Quer que eu adapte essa mesa para o seu espaço? Você pode pedir variações de medidas,
+          acabamento e tonalidade para combinar com seu ambiente.
+        </p>
+
+        <a href="https://wa.me/5551990105508" target="_blank" rel="noopener">
+          <button class="btn">Solicitar orçamento</button>
+        </a>
+      </div>
+    </section>
+
+    <!-- MATERIAIS -->
+    <section class="section">
+      <h2>Materiais & Construção</h2>
+
+      <p>
+        Produzida com cortes precisos e acabamento cuidadoso, a Mesa Elipse Orgânica
+        une estrutura firme com estética leve. O tampo em vidro cria contraste e valoriza
+        a geometria do desenho.
+      </p>
+
+      <ul>
+        <li>• Base em MDF com acabamento refinado</li>
+        <li>• Tampo em vidro para destaque do design</li>
+        <li>• Bordas com fita de acabamento</li>
+        <li>• Montagem prevista conforme manual</li>
+      </ul>
+    </section>
+
+    <!-- AMBIENTES -->
+    <section class="section">
+      <h2>Ambientes & Estilo</h2>
+
+      <p>
+        O formato elíptico favorece circulação e funciona muito bem em salas integradas,
+        deixando o espaço mais fluido. Ideal para composições com sofá, poltronas e tapetes
+        em layouts orgânicos.
+      </p>
+
+      <ul>
+        <li>• Salas de estar e lounges</li>
+        <li>• Ambientes integrados (estar + jantar)</li>
+        <li>• Recepção e espaços comerciais</li>
+        <li>• Projetos minimalistas e contemporâneos</li>
+      </ul>
+    </section>
+
+    <!-- PRODUÇÃO & LOGÍSTICA -->
+    <section class="section">
+      <h2>Produção & Logística</h2>
+
+      <p>
+        A Lignum produz sob encomenda. Cada peça é alinhada com o cliente antes de finalizar
+        medidas, acabamento e detalhes.
+      </p>
+
+      <ul>
+        <li>• Produção sob encomenda</li>
+        <li>• Ajustes conforme necessidade do ambiente</li>
+        <li>• Envio para todo o Brasil (embalagem protegida)</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    © LIGNUM MÓVEIS — Mobiliário autoral, peças únicas feitas sob encomenda.
+  </footer>
+
+</body>
+</html>

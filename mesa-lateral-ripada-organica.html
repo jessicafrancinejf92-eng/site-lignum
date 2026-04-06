@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>LIGNUM MÓVEIS — Mesa Lateral Ripado Orgânico (Sofá / Cabeceira)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      background: #ffffff;
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #fafafa;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 14px;
+    }
+
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      color: #444;
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: #000; }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 6px;
+      background: #d6b790;
+      border: none;
+      color: #fff;
+      font-size: 13px;
+      cursor: pointer;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .btn:hover { background: #c7a57c; }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1,h2,h3 {
+      color: #222;
+      margin-bottom: 14px;
+    }
+
+    .product-section {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+      align-items: flex-start;
+    }
+
+    .gallery { display: grid; gap: 14px; }
+
+    .gallery-main img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+    }
+
+    .thumb-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .thumb-row img {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    .thumb-row img:hover {
+      border-color: #d6b790;
+      transform: scale(1.02);
+    }
+
+    .tagline {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #777;
+      margin-bottom: 6px;
+    }
+
+    .section { margin-bottom: 60px; }
+    ul li { margin-bottom: 6px; }
+
+    .specs {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 16px 18px;
+      background: #fff;
+    }
+
+    footer {
+      background: #fafafa;
+      border-top: 1px solid #eee;
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+    }
+
+    @media (max-width: 900px) {
+      .product-section { grid-template-columns: 1fr; }
+      .thumb-row img { height: 90px; }
+      .nav-links { display: none; }
+    }
+  </style>
+
+  <script>
+    function trocarImagem(src) {
+      document.getElementById("foto-principal").src = src;
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="nav-logo" onclick="location.href='index.html'">LIGNUM MÓVEIS</div>
+
+      <div class="nav-links">
+        <a href="index.html#produtos">Produtos</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#contato">Contato</a>
+      </div>
+
+      <a href="https://wa.me/5551990105508" target="_blank" rel="noopener">
+        <button class="btn">Orçamento</button>
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- GALERIA + TEXTO PRINCIPAL -->
+    <section id="produto" class="product-section">
+
+      <!-- GALERIA -->
+      <div class="gallery">
+        <div class="gallery-main">
+          <img
+            id="foto-principal"
+            src="https://http2.mlstatic.com/D_NQ_NP_2X_614828-MLB93031119952_092025-F.webp"
+            alt="Mesa Lateral Ripado Orgânico Lignum Móveis"
+          />
+        </div>
+
+        <div class="thumb-row">
+          <img onclick="trocarImagem(this.src)"
+               src="https://http2.mlstatic.com/D_NQ_NP_2X_614828-MLB93031119952_092025-F.webp"
+               alt="Mesa Lateral Ripado Orgânico - Foto 1" />
+
+          <img onclick="trocarImagem(this.src)"
+               src="https://http2.mlstatic.com/D_NQ_NP_2X_941851-MLB103852008686_012026-F-mesa-lignum-orgnico-ripado-50cm-retangular-moderna.webp"
+               alt="Mesa Lateral Ripado Orgânico - Foto 2" />
+
+          <img onclick="trocarImagem(this.src)"
+               src="https://http2.mlstatic.com/D_NQ_NP_2X_993239-MLB104385656159_012026-F-mesa-lignum-orgnico-ripado-50cm-retangular-moderna.webp"
+               alt="Mesa Lateral Ripado Orgânico - Foto 3" />
+
+          <img onclick="trocarImagem(this.src)"
+               src="https://http2.mlstatic.com/D_NQ_NP_2X_929024-MLB103852277476_012026-F-mesa-lignum-orgnico-ripado-50cm-retangular-moderna.webp"
+               alt="Mesa Lateral Ripado Orgânico - Foto 4" />
+
+          <img onclick="trocarImagem(this.src)"
+               src="https://http2.mlstatic.com/D_NQ_NP_2X_651229-MLB104385655913_012026-F-mesa-lignum-orgnico-ripado-50cm-retangular-moderna.webp"
+               alt="Mesa Lateral Ripado Orgânico - Foto 5" />
+
+          <img onclick="trocarImagem(this.src)"
+               src="https://http2.mlstatic.com/D_NQ_NP_2X_864421-MLB80908247191_112024-F.webp"
+               alt="Mesa Lateral Ripado Orgânico - Foto 6" />
+
+          <img onclick="trocarImagem(this.src)"
+               src="https://http2.mlstatic.com/D_NQ_NP_2X_731688-MLB80908021085_112024-F.webp"
+               alt="Mesa Lateral Ripado Orgânico - Foto 7" />
+
+          <img onclick="trocarImagem(this.src)"
+               src="https://http2.mlstatic.com/D_NQ_NP_2X_981726-MLB80644474502_112024-F.webp"
+               alt="Mesa Lateral Ripado Orgânico - Foto 8" />
+
+          <img onclick="trocarImagem(this.src)"
+               src="https://http2.mlstatic.com/D_NQ_NP_2X_897123-MLB80908286689_112024-F.webp"
+               alt="Mesa Lateral Ripado Orgânico - Foto 9" />
+
+          <img onclick="trocarImagem(this.src)"
+               src="https://http2.mlstatic.com/D_NQ_NP_2X_730185-MLB80644768264_112024-F.webp"
+               alt="Mesa Lateral Ripado Orgânico - Foto 10" />
+
+          <img onclick="trocarImagem(this.src)"
+               src="https://http2.mlstatic.com/D_NQ_NP_2X_708237-MLB78927589211_092024-F.webp"
+               alt="Mesa Lateral Ripado Orgânico - Foto 11" />
+        </div>
+      </div>
+
+      <!-- TEXTO PRINCIPAL -->
+      <div>
+        <p class="tagline">Mesa lateral · criado mudo · apoio de sofá · ripado orgânico</p>
+
+        <h1>Mesa Lateral Ripado Orgânico (Sofá / Cabeceira)</h1>
+
+        <p>
+          Uma peça compacta e versátil para usar ao lado do sofá, como mesa lateral, ou no quarto como mesa de cabeceira.
+          O ripado orgânico dá presença e textura, trazendo um visual moderno sem pesar no ambiente.
+        </p>
+
+        <div class="specs">
+          <h3>Características principais</h3>
+          <ul>
+            <li><strong>Marca:</strong> Lignum Móveis</li>
+            <li><strong>Modelo:</strong> Ripado Paramétrico</li>
+            <li><strong>Cor:</strong> Marrom</li>
+            <li><strong>Forma:</strong> Retangular</li>
+            <li><strong>Estilo:</strong> Moderno</li>
+            <li><strong>Material da base:</strong> MDF</li>
+            <li><strong>Material do tampo:</strong> MDF</li>
+            <li><strong>Acabamento:</strong> Fita bordo</li>
+          </ul>
+
+          <h3>Medidas & Peso</h3>
+          <ul>
+            <li><strong>Altura:</strong> 65 cm</li>
+            <li><strong>Comprimento:</strong> 30 cm</li>
+            <li><strong>Largura:</strong> 40 cm</li>
+            <li><strong>Diâmetro (informação do anúncio):</strong> 31 cm</li>
+            <li><strong>Peso:</strong> 5 kg</li>
+          </ul>
+
+          <h3>Montagem</h3>
+          <ul>
+            <li><strong>Requer montagem:</strong> Não (vai pronta)</li>
+            <li><strong>Inclui manual:</strong> Não</li>
+            <li><strong>Inclui acessórios:</strong> Não</li>
+          </ul>
+        </div>
+
+        <p style="margin-top:14px;">
+          Quer esse modelo em outra cor ou medida? Me chama no WhatsApp com sua cidade e as medidas desejadas.
+        </p>
+
+        <a href="https://wa.me/5551990105508" target="_blank" rel="noopener">
+          <button class="btn">Solicitar orçamento</button>
+        </a>
+      </div>
+    </section>
+
+    <!-- AMBIENTES -->
+    <section class="section">
+      <h2>Ambientes & Uso</h2>
+      <p>
+        Um apoio ideal para objetos do dia a dia: controle, celular, livros, xícara e decoração.
+        Perfeita para salas pequenas e quartos, por ser compacta e muito funcional.
+      </p>
+      <ul>
+        <li>• Mesa lateral de sofá</li>
+        <li>• Mesa de cabeceira / criado mudo</li>
+        <li>• Mesa de apoio para poltronas</li>
+        <li>• Ambientes modernos e minimalistas</li>
+      </ul>
+    </section>
+
+    <!-- PRODUÇÃO -->
+    <section class="section">
+      <h2>Produção</h2>
+      <p>
+        Peça produzida em MDF com acabamento limpo e recortes precisos. Enviada pronta para uso.
+      </p>
+      <ul>
+        <li>• MDF</li>
+        <li>• Acabamento em fita bordo</li>
+        <li>• Design ripado orgânico</li>
+        <li>• Envio pronto, sem montagem</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    © LIGNUM MÓVEIS — Mobiliário autoral, peças únicas feitas sob encomenda.
+  </footer>
+
+</body>
+</html>
